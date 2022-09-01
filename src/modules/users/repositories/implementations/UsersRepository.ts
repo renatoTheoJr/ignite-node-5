@@ -32,6 +32,6 @@ export class UsersRepository implements IUsersRepository {
     first_name,
     last_name,
   }: IFindUserByFullNameDTO): Promise<User[] | undefined> {
-    return this.repository.query(`select * from users where lower(first_name)= lower(${first_name}) and lowere(last_name)= lower(${last_name})`); // Complete usando raw query
+    return this.repository.query(`select * from users where lower(first_name)= lower(${first_name}) and lower(last_name)= lower(${last_name})`); // Complete usando raw query
   }
 }
